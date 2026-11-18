@@ -92,7 +92,7 @@ Contributions are welcome! Please feel free to submit a Pull Request to add more
 
 # Awesome-3D-Animation-Motion-Retargeting
 
-# Top 3D Animation & Motion Retargeting Ecosystem
+## Top 3D Animation & Motion Retargeting Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on AI Video-to-Mocap, Skeletal Rigging, Motion Retargeting & 3D Character Animation*  
