@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background linear gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <!-- Glowing accent gradients -->
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+
+    <linearGradient id="neonPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#e0f2fe" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <radialGradient id="glowPulse" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Grid pattern -->
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.8" opacity="0.6" />
+    </pattern>
+
+    <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseOrb {
+      0%, 100% { transform: scale(1) translate(0px, 0px); opacity: 0.3; }
+      50% { transform: scale(1.15) translate(-15px, 10px); opacity: 0.6; }
+    }
+    @keyframes floatRigNode {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+    @keyframes sweepLine {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+    .orb-pulse { animation: pulseOrb 8s ease-in-out infinite; }
+    .node-float { animation: floatRigNode 4s ease-in-out infinite; }
+    .node-float-rev { animation: floatRigNode 5s ease-in-out infinite reverse; }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1200" height="400" fill="url(#bgGrad)" />
+
+  <!-- Animated Ambient Orbs in Background -->
+  <circle cx="200" cy="120" r="180" fill="url(#neonPurple)" opacity="0.25" filter="url(#glowFilter)" class="orb-pulse" />
+  <circle cx="1000" cy="280" r="220" fill="url(#neonCyan)" opacity="0.25" filter="url(#glowFilter)" class="orb-pulse" />
+
+  <!-- Perspective Cyber Grid -->
+  <rect width="1200" height="400" fill="url(#cyberGrid)" />
+
+  <!-- Stylized Background Motion Retargeting Skeletal Nodes (Left Side) -->
+  <g opacity="0.4" class="node-float">
+    <!-- Rig Bones -->
+    <line x1="120" y1="90" x2="160" y2="150" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4 2" />
+    <line x1="160" y1="150" x2="130" y2="230" stroke="#06b6d4" stroke-width="2" />
+    <line x1="160" y1="150" x2="220" y2="170" stroke="#8b5cf6" stroke-width="2" />
+    <line x1="220" y1="170" x2="250" y2="260" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="4 2" />
+    <!-- Rig Joints -->
+    <circle cx="120" cy="90" r="6" fill="#38bdf8" />
+    <circle cx="160" cy="150" r="8" fill="#818cf8" />
+    <circle cx="130" cy="230" r="5" fill="#06b6d4" />
+    <circle cx="220" cy="170" r="7" fill="#c084fc" />
+    <circle cx="250" cy="260" r="6" fill="#ec4899" />
+  </g>
+
+  <!-- Stylized Motion Retargeting Skeletal Nodes (Right Side) -->
+  <g opacity="0.45" class="node-float-rev">
+    <!-- Retargeted Rig Bones -->
+    <line x1="1060" y1="110" x2="1010" y2="180" stroke="#8b5cf6" stroke-width="2" />
+    <line x1="1010" y1="180" x2="1050" y2="260" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4 2" />
+    <line x1="1010" y1="180" x2="940" y2="200" stroke="#ec4899" stroke-width="2" />
+    <line x1="940" y1="200" x2="920" y2="290" stroke="#8b5cf6" stroke-width="2" />
+    <!-- Rig Joints -->
+    <circle cx="1060" cy="110" r="6" fill="#ec4899" />
+    <circle cx="1010" cy="180" r="8" fill="#8b5cf6" />
+    <circle cx="1050" cy="260" r="5" fill="#38bdf8" />
+    <circle cx="940" cy="200" r="7" fill="#a855f7" />
+    <circle cx="920" cy="290" r="6" fill="#06b6d4" />
+  </g>
+
+  <!-- Top Accent Beam Line -->
+  <line x1="0" y1="2" x2="1200" y2="2" stroke="url(#neonCyan)" stroke-width="3" />
+
+  <!-- Foreground Content (Strictly in foreground and clear) -->
+  <g text-anchor="middle">
+    <!-- Category Badge Pill -->
+    <rect x="440" y="55" width="320" height="34" rx="17" fill="#1e293b" fill-opacity="0.8" stroke="#38bdf8" stroke-width="1.2" />
+    <text x="600" y="77" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">
+      ⚡ THE DEFINITIVE CURATED RESOURCE
+    </text>
+
+    <!-- Main Title -->
+    <text x="600" y="165" fill="url(#textGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="46" font-weight="900" letter-spacing="-0.5">
+      Awesome 3D Animation
+    </text>
+    <text x="600" y="218" fill="url(#neonCyan)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="0.5">
+      &amp; Motion Retargeting
+    </text>
+
+    <!-- Subtitle / Tagline -->
+    <text x="600" y="270" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="500">
+      Markerless AI Mocap • Skeletal Rigging • Bone Retargeting • Generative Text-to-Motion
+    </text>
+
+    <!-- Engine Pills -->
+    <g transform="translate(0, 310)">
+      <!-- Blender -->
+      <rect x="290" y="0" width="130" height="32" rx="16" fill="#0f172a" stroke="#f97316" stroke-width="1" />
+      <text x="355" y="21" fill="#fdba74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">🎨 Blender 4.x</text>
+
+      <!-- Unreal Engine -->
+      <rect x="435" y="0" width="150" height="32" rx="16" fill="#0f172a" stroke="#38bdf8" stroke-width="1" />
+      <text x="510" y="21" fill="#7dd3fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">🎮 Unreal Engine 5</text>
+
+      <!-- Godot -->
+      <rect x="600" y="0" width="130" height="32" rx="16" fill="#0f172a" stroke="#478cbf" stroke-width="1" />
+      <text x="665" y="21" fill="#93c5fd" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">🤖 Godot Engine</text>
+
+      <!-- Unity -->
+      <rect x="745" y="0" width="160" height="32" rx="16" fill="#0f172a" stroke="#a855f7" stroke-width="1" />
+      <text x="825" y="21" fill="#d8b4fe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">🕹️ Unity Humanoid</text>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Line -->
+  <line x1="0" y1="398" x2="1200" y2="398" stroke="url(#neonPurple)" stroke-width="2" />
+</svg>
