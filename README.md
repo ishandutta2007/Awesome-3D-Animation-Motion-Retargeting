@@ -92,3 +92,135 @@ Contributions are welcome! Please feel free to submit a Pull Request to add more
 
 # Awesome-3D-Animation-Motion-Retargeting
 
+# Top 3D Animation & Motion Retargeting Ecosystem
+
+**Curated List of SaaS Products & Open-Source GitHub Projects**  
+*Focused on AI Video-to-Mocap, Skeletal Rigging, Motion Retargeting & 3D Character Animation*  
+**Last updated: November 2026**
+
+This repository tracks notable **SaaS platforms** and **open-source projects** for **3D Animation & Motion Retargeting**. These tools extract human and creature motion from video, sensors, or text prompts, retarget animations across disparate 3D skeletons, and export ready-to-use character rigs for Blender, Unity, Unreal Engine, and Godot.
+
+**Examples** include Mixamo, DeepMotion, Plask, Rokoko Studio, Move.ai, Kinetix, Cascadeur, Wonder Dynamics (Autodesk Flow Studio), ActorCore, AnyWorld, and MaxLiu22/Motion2MixamoRig (the category leaders). 
+
+**Open-source emphasis**: This section is heavily expanded with every major active project for local markerless motion capture, automated Mixamo/Rigify/UE5 bone retargeting, text-to-motion synthesis, and physics-assisted keyframing — ideal for indie game developers, 3D animators, VTubers, and researchers building transparent animation pipelines.
+
+Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
+
+## Table of Contents
+- [SaaS/Hosted Platforms](#saashosted-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer](#disclaimer)
+
+## SaaS/Hosted Platforms
+
+- **[Adobe Mixamo](https://mixamo.com)**  
+  Cloud-based automatic 3D character rigging service and extensive library of downloadable motion-captured animations for humanoids.
+
+- **[DeepMotion](https://deepmotion.com)**  
+  AI-powered cloud markerless motion capture platform that turns standard 2D videos into full-body, hand, and facial 3D animations with physics simulation.
+
+- **[Plask](https://plask.ai)**  
+  Browser-based AI motion capture and 3D keyframe editing suite for extracting, cleaning, and retargeting video motion directly onto custom rigs.
+
+- **[Rokoko Studio](https://rokoko.com)**  
+  All-in-one motion capture software and Rokoko Vision cloud platform supporting inertial mocap suits, smartgloves, and single/dual-camera AI video tracking.
+
+- **[Move.ai](https://move.ai)**  
+  Multi-camera and single-camera markerless AI motion capture platform delivering studio-grade skeletal animations without physical markers or suits.
+
+- **[Kinetix](https://kinetix.tech)**  
+  No-code cloud AI platform and SDK for generating, converting, and integrating user-generated 3D character emotes into games and virtual worlds.
+
+- **[Cascadeur](https://cascadeur.com)**  
+  Standalone physics-assisted 3D keyframe animation software featuring AI-powered AutoPosing, trajectory editing, and secondary motion tools.
+
+- **[Wonder Dynamics (Autodesk Flow Studio)](https://wonderdynamics.com)**  
+  Cloud AI VFX tool that automatically detects actor performance from live-action footage, tracks camera movement, and replaces actors with rigged CG characters.
+
+- **[Reallusion ActorCore](https://reallusion.com)**  
+  Cloud library and browser-based motion retargeting platform offering AAA mocap animations and AccuRIG auto-rigging compatible with major 3D engines.
+
+- **[AnyWorld](https://anyworld.ai)**  
+  AI-driven 3D world and interactive character animation platform enabling rapid rigging, motion generation, and asset deployment.
+
+
+## Open-Source GitHub Projects
+
+- **[MaxLiu22/Motion2MixamoRig](https://github.com/MaxLiu22/Motion2MixamoRig)**  
+  Open-source Python and Blender 4.2+ extension that extracts human motion from video or still photos and retargets it onto Adobe Mixamo-rigged characters (`Apache-2.0`).
+
+- **[FreeMoCap](https://github.com/freemocap/freemocap)**  
+  Free, hardware-agnostic open-source multi-camera markerless motion capture system designed to bring research-grade 3D tracking to artists and indie creators (`AGPL-3.0`).
+
+- **[BlendCap](https://github.com/Arcomade/BlendCap)**  
+  Offline single-video performance capture add-on for Blender 4.2+ with body, hand, and face tracking, foot grounding cleanup, and retargeting to Rigify, Auto-Rig Pro, CloudRig, and Mixamo (`GPL-3.0`).
+
+- **[toyxyz-blender-retargeter](https://github.com/toyxyz/toyxyz-blender-retargeter)**  
+  Open-source Blender add-on for live and batch skeletal motion retargeting featuring automatic bone matching, reusable JSON presets, reference pose editing, and foot contact controls.
+
+- **[vid2anim](https://github.com)**  
+  CPU-compatible open-source AI motion capture and universal retargeting tool with a Blender add-on for animating Mixamo, VRM, Rigify, and UE5 rigs from video or photos.
+
+- **[Open Mocap for Blender](https://github.com/Larenju-Rai/open-mocap-blender)**  
+  Offline open-source Blender add-on utilizing MediaPipe and OpenCV for full-body and hand pose tracking with direct retargeting onto custom 3D rigs (`MIT`).
+
+- **[HyMotion (Tencent Hunyuan)](https://github.com)**  
+  Open-source 3D character animation model using Diffusion Transformers and flow matching to generate natural 3D skeletal motion from text prompts for local pipelines and ComfyUI.
+
+- **[Mesh2Motion](https://github.com)**  
+  Free, open-source web-based 3D auto-rigging and animation application offering built-in human, quadruped, bird, and creature animation sets with GLB export (`MIT`).
+
+- **[MoCap Anything](https://github.com)**  
+  Open-source video-to-3D motion capture model capable of extracting and retargeting joint rotations from single videos onto humans, animals, creatures, and arbitrary 3D rigs (`MIT`).
+
+- **[NVIDIA SOMA Retargeter](https://github.com/NVIDIA/soma-retargeter)**  
+  Open-source motion retargeting library built with Newton and NVIDIA Warp for converting BVH human motion into humanoid robot joint trajectories using IK and contact stabilization (`Apache-2.0`).
+
+- **[Kimodo (NVIDIA)](https://github.com/nv-tlabs/kimodo)**  
+  Open-source kinematic motion generation model supporting SMPL-X skeletons and General Motion Retargeting (GMR) across virtual characters and humanoid robots.
+
+- **[Rokoko Studio Live Blender Plugin](https://github.com)**  
+  Official open-source Blender plugin for real-time motion capture streaming and custom skeletal bone-mapping/retargeting directly inside Blender (`GPL-3.0`).
+
+- **[VRM Add-on for Blender](https://github.com)**  
+  Open-source Blender extension for importing, rigging, retargeting humanoid bones, and exporting VRM 3D avatars (`MIT`).
+
+- **[SysMocap](https://github.com)**  
+  Open-source real-time webcam motion capture and live character retargeting system supporting VRM, Live2D, and custom 3D avatars (`GPL-3.0`).
+
+- **[ioxandrii/blender_mocap](https://github.com/ioxandrii/blender_mocap)**  
+  Lightweight open-source Blender CLI utility script for batch retargeting BVH motion capture files onto Mixamo-style FBX armatures while preserving skin weights.
+
+- **[Blender](https://github.com)**  
+  Industry-standard open-source 3D creation suite featuring Rigify auto-rigging, NLA non-linear animation blending, IK/FK constraints, and native bone retargeting (`GPL-2.0+`).
+
+### Additional Strong Open-Source Options
+
+- **[Pose2Sim](https://github.com)** and **[OpenCap](https://github.com)** for multi-camera markerless biomechanical motion capture and OpenSim skeletal kinematics.
+- **[HumanML3D](https://github.com)** and **[MotionDiffuse](https://github.com)** for research-grade text-driven 3D human motion synthesis and SMPL export.
+- **[Expy Kit](https://github.com)** and **[Auto-Rig Pro / Rigify Utilities](https://github.com/topics/retargeting-motion)** for converting armatures between Mixamo, Unreal Mannequin (UE4/UE5), and Blender Rigify skeletons.
+- **[VSeeFace / OpenSeeFace](https://github.com)** for real-time webcam facial and head-pose tracking retargeted to 3D blendshapes.
+- **[Godot Engine](https://github.com)** and **[O3DE](https://github.com)** for built-in runtime `SkeletonProfileHumanoid` bone retargeting across diverse 3D character proportions.
+
+**Frameworks for building custom systems**: Combine **MaxLiu22/Motion2MixamoRig** or **FreeMoCap** with **Blender (Rigify + NLA)**, **HyMotion**, and **Godot's SkeletonProfileHumanoid** for end-to-end local 3D motion capture and retargeting pipelines.
+
+## How to Contribute
+
+1. Fork the repo.
+2. Add/edit entries in `README.md` (follow existing format).
+3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
+4. Submit PR with a short explanation.
+
+Star the repo if you find it useful!
+
+## Disclaimer
+
+- This is a **community-curated** list — not exhaustive and not an endorsement.
+- Some open-source AI mocap pipelines rely on academic body models (such as SMPL/SMPL-X) that carry separate non-commercial research licenses — verify model terms before commercial game or film deployment.
+- Self-hosted video-to-mocap models require compatible GPU drivers (CUDA/ROCm/Metal) or extended CPU processing times.
+
+---
+
+**Made for 3D animators, technical artists, game developers, and motion capture engineers.**  
+Let's make 3D character animation and motion retargeting more open, accessible, and automated.
